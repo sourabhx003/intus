@@ -2,7 +2,9 @@
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and python3.10:
+To clone and run this application, you'll need [Git](https://git-scm.com) and python3.10
+
+Note: You have to copy the .env file to the project dir manually
 
 ### Docker
 
@@ -12,6 +14,9 @@ git clone https://github.com/sourabhx003/intus.git
 
 # Go into the repository
 cd intus
+
+# Copy the .env file
+# cp ~/Downloads/.env .
 
 # Install dependencies
 docker build -t intus_chatbot .
@@ -28,6 +33,9 @@ git clone https://github.com/sourabhx003/intus.git
 
 # Go into the repository
 cd intus
+
+# Copy the .env file
+# cp ~/Downloads/.env .
 
 # Create virtual env
 python3 -m venv .venv
@@ -76,6 +84,16 @@ ruff check --fix            # Lint all files in the current directory, and fix a
 ruff format                 # Formats all files in the current directory.
 ```
 
+### Error
+```sh
+ValidationError: 1 validation error for OpenAI
+__root__
+  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass
+`openai_api_key` as a named parameter. (type=value_error)
+```
+
+If facing the above issue, copy the .env file to intus and run again
+.env file conatins `openai_api_key`
 ## License
 
 MIT
