@@ -1,0 +1,10 @@
+#python
+__pycache__/
+app/__pycache__/
+
+# virtual env
+.venv/
+.ruff_cache/
+
+# credentials
+.env
